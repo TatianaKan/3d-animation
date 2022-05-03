@@ -186,12 +186,15 @@ body {
 	color: var(--accent);
 }
 
+.showcase-carusel .swiper-wrapper {
+	transition: var(--transition);
+}
+
 .showcase-carusel__item {
 	position: relative;
 	height: calc(100vh - var(--padding) * 2);
 	text-align: center;
 	opacity: .25;
-
 	transition: opasity 1.8s var(--transition), transform 1.8s var(--transition);
 }
 
@@ -214,6 +217,7 @@ body {
 	color: rgba(255, 255, 255, .5);
 	text-shadow: rgba(58, 78, 94) 0 0 10px;
 }
+
 
 .swiper-slide {
 	transform: scale(.75);
