@@ -248,7 +248,7 @@ body {
 
 .showcase-carusel__image-right {
 	perspective-origin: right center;
-	clip-path: polygon(50% 0, 100% 0, 100% 100% , 50% 100%);
+	clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
 }
 
 .showcase-carusel__image-left .showcase-carusel__image {
@@ -259,6 +259,57 @@ body {
 .showcase-carusel__image-right .showcase-carusel__image {
 	animation: k-right-side 2s ease-in-out infinite;
 	animation-direction: alternate;
+}
+
+/*//nav*/
+.showcase-navigation {
+	overflow: hidden;
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.showcase-navigation>* {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	outline: none;
+	cursor: pointer;
+}
+
+.showcase-navigation>*::before {
+	content: '?';
+	font-family: assassin;
+	opacity: 0;
+	transition: opasity .7s ease-in-out;
+	position: absolute;
+	transform: rotate(-90deg);
+	left: 50px;
+	top: 50%;
+	font-size: 40px;
+}
+
+.showcase-navigation>*:hover::before {
+	opacity: .3;
+
+}
+
+.showcase-navigation__next {
+	right: 0;
+}
+
+.showcase-navigation__next::before {
+	transform: rotate(90deg);
+	right: 50px;
+	left: auto
+}
+
+.showcase-navigation>*.swiper-button-diabled {
+	display: none;
+
 }
 
 /*animation*/
